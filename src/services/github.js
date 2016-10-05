@@ -1,21 +1,37 @@
 import 'isomorphic-fetch';
 
-export function fetchIssues(username, repository) {
-    return fetch(`//api.github.com/repos/${username}/${repository}/issues`)
-        .then((response) => {
-            if (response.status >= 400) {
-                throw new Error('Bad response from server');
-            }
-            return response.json();
-        });
+export function fetchIssues(/* username, repository */) {
+    return Promise.resolve([{ title: 'Foo', body: 'foooooooo' }]);
 }
 
+const REPOSITORY = {
+    facebook: {
+        react: {
+            full_name: 'facebook/react'
+        }
+    },
+    reactjs: {
+        redux: {
+            full_name: 'reactjs/redux'
+        }
+    },
+    yelouafi: {
+        'redux-saga': {
+            full_name: 'reactjs/redux-saga'
+        }
+    }
+};
+
 export function fetchRepository(username, repository) {
-    return fetch(`//api.github.com/repos/${username}/${repository}`)
-        .then((response) => {
-            if (response.status >= 400) {
-                throw new Error('Bad response from server');
-            }
-            return response.json();
-        });
+    if (!REPOSITORY[username]) {
+        return Promise.reject({ code: 404, message: `Not found ${username}:${repository}` });
+    }
+
+    const repo = REPOSITORY[username][repository];
+
+    if (repo) {
+        return Promise.resolve(repo);
+    }
+
+    return Promise.reject({ code: 404 });
 }
