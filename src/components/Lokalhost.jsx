@@ -7,7 +7,7 @@ function Lokalhost({ cornify }) {
         <div>
             <h1>Lokál-host</h1>
 
-            <button onClick={cornify}>Na zdraví!</button>
+            <button onClick={cornify}>Cheers!</button>
         </div>
     );
 }

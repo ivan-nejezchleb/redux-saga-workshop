@@ -54,7 +54,7 @@ You will also see any lint errors in the console.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.  
+Launches the test runner in the interactive watch mode.
 
 
 ### `npm run validate`
@@ -69,7 +69,7 @@ Here's the list of goals we'll try to implement.
 
 Go to `http://localhost:3000/lokalhost`
 
-Pressing button "Na zdravi" triggers `CORNIFY` action.
+Pressing button "Cheers!" triggers `CORNIFY` action.
 
 Fill the blank space in the `src/sagas/cornifySaga.js` and call `add` method
 from the cornify library everytime `CORNIFY` action gets triggered.
