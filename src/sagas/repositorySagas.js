@@ -1,5 +1,4 @@
-import { takeEvery } from 'redux-saga';
-import { call, put } from 'redux-saga/effects';
+import { takeEvery, call, put, all } from 'redux-saga/effects';
 
 import * as Actions from '../constants/actions';
 import * as API from '../services/github';
@@ -17,8 +16,8 @@ function* fetchSingleRepository(username, repository) {
 export function* fetchRepositories(action) {
     const repositories = action.payload;
 
-    yield repositories.map(({ username, repository }) =>
-        call(fetchSingleRepository, username, repository));
+    yield all(repositories.map(({ username, repository }) =>
+        call(fetchSingleRepository, username, repository)));
 }
 
 // This is the method you are looking for

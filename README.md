@@ -83,8 +83,8 @@ npm test
 Now press `p` and write cornify.
 
 Docs:
-* [call](https://yelouafi.github.io/redux-saga/docs/api/index.html#callfn-args)
-* [take](https://yelouafi.github.io/redux-saga/docs/api/index.html#takepattern)
+* [call](https://redux-saga.js.org/docs/api/#callfn-args)
+* [take](https://redux-saga.js.org/docs/api/#takepattern)
 
 
 ### 2. Fetch issues
@@ -107,9 +107,9 @@ username, repository as parameters.
 Dispatch `FETCH_ISSUES_LOADED` and pass it username, repository and the list of fetched issues.
 
 Docs:
-* [call](https://yelouafi.github.io/redux-saga/docs/api/index.html#callfn-args)
-* [put](https://yelouafi.github.io/redux-saga/docs/api/index.html#putaction)
-* [takeEvery](https://yelouafi.github.io/redux-saga/docs/api/index.html#takeeverypattern-saga-args)
+* [call](https://redux-saga.js.org/docs/api/#callfn-args)
+* [put](https://redux-saga.js.org/docs/api/#putaction)
+* [takeEvery](https://redux-saga.js.org/docs/api/#takeeverypattern-saga-args)
 
 
 ### 3. Error handling
@@ -134,9 +134,9 @@ Now we need to implement the showErrorMessage saga, that will create:
 The most important part - write test for the `showErrorMessage` saga
 
 Docs:
-* [call](https://yelouafi.github.io/redux-saga/docs/api/index.html#callfn-args)
-* [put](https://yelouafi.github.io/redux-saga/docs/api/index.html#putaction)
-* [delay](https://yelouafi.github.io/redux-saga/docs/api/index.html#delayms-val)
+* [call](https://redux-saga.js.org/docs/api/#callfn-args)
+* [put](https://redux-saga.js.org/docs/api/#putaction)
+* [delay](https://redux-saga.js.org/docs/api/#delayms-val)
 
 ### 4. Free time!
 
